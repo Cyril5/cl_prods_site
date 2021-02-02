@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}
+		Cyril Leger (cyril-leger.nocturn-system.com)
+		{% endblock %}
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	{# <!-- bootstrap core css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> #}
+
+
+	{% block stylesheets %}
+	{% endblock %}
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootswatch-lux.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+</head>
+
+<body>
+
+	<!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/"><img src="{{ asset('img/logo.png') }}" class="logo d-inline-block align-top"
+				width="150" alt=""></a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">ACCUEIL <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('blog') }}">BLOG</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('blog') }}">MUSIQUES</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('contact') }}">CONTACT</a>
+				</li>
+			</ul>
+			{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+			<ul class="navbar-nav ml-auto">
+				<li class="navbar-brand" href="/">{{ app.user.username }}</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+				</li>
+			</ul>
+			{% endif %}
+		</div>
+	</nav>
+
+
+		{% block body %}
+
+		{% endblock %}
+
+
+	<footer>
+		<div class="container-fluid bg-primary">
+			<div class="row">
+				<p>Cyril Leger</br>
+					SIREN : 884 907 676</br>
+					SIRET : 88490767600016</br>
+					Tél : 06 82 86 00 24</br>
+					<a href="mailto:cyril.leger5@gmail.com">cyril.leger5@gmail.com</a>
+				</p>
+			</div>
+			<p class="text-center">Copyright &copy; 2020-2021 Cyril Leger,Tous droits réservés.</p>
+		</div>
+
+
+
+	</footer>
+
+	<!--jquery-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<!-- popper.js -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<!-- bootstrap js-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+
+	{% block javascripts %}{% endblock %}
+</body>
+
+</html>

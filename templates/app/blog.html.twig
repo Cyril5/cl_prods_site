@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section id="blog">
+		<h1>What's up at this time ?</h1>
+		<p>It's under construction yet !</p>
+
+		<div class="container">
+			<div class="row">
+			{% for article in articles %}
+					<div class="col-md-12">
+						<h2>{{ article.title }}</h2>
+						<p>Ecris le : {{ article.creationDate | date('d/m/Y') }} à {{ article.creationDate | date('H:m') }}</p>
+						<p>Modifié le : {{ article.modificationDate | date('d/m/Y') }} à {{ article.modificationDate | date('H:m') }}</p>
+						<img src="{{ article.image }}" alt="{{ article.title }}_img">
+						<p>{{ article.content | json_encode()}}</p>
+						<a class="btn btn-primary button" href=" {{ path('blog_read', {
+							'id' : article.id,
+							'title' : article.title
+							}) }}" role="button">Lire la suite</a>
+					</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

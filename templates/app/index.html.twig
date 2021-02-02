@@ -1,0 +1,168 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<section id="intro">
+
+			{# <div class="intro__text">
+				<h1>DEVELOPPEUR INFORMATIQUE</h1>
+				<p>Développement Web, Logiciels, Jeux vidéos, Android et iOS.</p>
+				<p>C#, Unity, PHP, HTML5, CSS3, Ionic5</p>
+			</div> #}
+
+			<blockquote class="blockquote">
+				<h1>Developpeur Informatique</h1>
+  				<p class="mb-0">Web, Logiciels, Jeux-vidéos 2D-3D, Android et iOS</p>
+  				<footer class="blockquote-footer">C#, Unity, PHP, HTML5, CSS3, Ionic5 <cite title="Source Title">Source Title</cite></footer>
+				<button type="button" class="btn btn-outline-secondary">Let's Go !</button>
+			</blockquote>
+
+</section>
+
+<section id="about">
+	<div class="container bg-light">
+	<h2>Who I'm ?</h2>
+	<div class="row">
+		<div class="col-lg-6 col-md-6">
+			<p>Après ma formation Développeur Web au CEFIM de Tours, je recherche des opportunités de poste dans le
+				domaine de la programmation informatique (Jeux, Web, Logiciels, Mobile...) . Depuis plusieurs années
+				j'ai développé des projets personnels et professionnels.
+
+			</p>
+			<p>
+				Je travail en collaboration avec un autre auto-entrepreneur qui lui est sur le secteur de Paris et
+				qui est spécialisé dans le domaine de la modélisation et animations 3D. Ensemble nous avons créer
+				une petite équipe de développeur indépendant sur Unity nommé : Nocturn-System et travaillons sur des
+				projets en parallèle.
+			</p>
+
+			Ma deuxième passion est la musique, en effet je suis guitariste,bassiste semi-professionnel dans
+			plusieurs projets et j'utilise mes capacités en informatique pour pouvoir utiliser la M.A.O et produire
+			de bons rendus graphique, sonore,animations....
+
+			Je suis aussi trésorier d'une jeune association : Magiamigos qui permet de promouvoir les artistes
+			amateurs indépendant de la région de Tours.
+
+		</div>
+
+		<div class="col-md-6">
+			<div>
+				<h3>Télécharger mon C.V</h3>
+				<img src="https://ressources.blogdumoderateur.com/2013/07/pdf-240x240.png" alt="">
+			</div>
+			<a class="btn btn-danger" href="#" role="button">Voir mon profil Malt</a>
+			<a class="btn btn-dark" href="#" role="button">Voir mon profil LinkedIn</a>
+		</div>
+	</div>
+	</div>
+</section>
+
+<section id="skills">
+	<div class="container bg-light">
+		<h3>Skills</h3>
+		<div class="row">
+			<div class="col-lg-2">
+				<img class="img-responsive" src="{{ asset('img/logo_cs.jpg') }}" alt="C# .NET">
+			</div>
+			<div class="col-lg-2">
+				<img class="img-responsive" src="{{ asset('img/logo_unity.jpg') }}" alt="Unity">
+			</div>
+			<div class="col-lg-2">
+				<img class="img-responsive" src="{{ asset('img/logo_w3.jpg') }}" alt="HTML CSS JS">
+			</div>
+			<div class="col-lg-2">
+				<img class="img-responsive" src="{{ asset('img/logo_php.jpg') }}" alt="PHP">
+			</div>
+			<div class="col-lg-2">
+				<img class="img-responsive" src="{{ asset('img/logo_photoshop.jpg') }}" alt="Adobe Photoshop">
+			</div>
+			<div class="col-lg-2">
+				<img class="img-responsive" src="{{ asset('img/logo_c4d.jpg') }}" alt="Cinema 4D">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="creations">
+	<div class="container">
+		<h2>What I did ?</h2>
+          <div class="row">
+            {% for creation in creations %}
+			<div class="col-md-4">
+				{# <div class="portfolio__item card bg-primary mb-3 text-center" style="width: 18rem;">
+				<img src="{{creation.image}}" class="card-img-top" alt={{ creation.title }}>
+				<div class="card-body">
+					<h5 class="card-title">{{ creation.title }}</h5>
+					<p class="card-text">{{ creation.description }}</p>
+				</div>
+				</div> #}
+			</div>
+            {% endfor %}
+		</div>
+	</div>
+</section>
+
+
+<section id="web-skills">
+	<div class="container">
+		<h2>What Can I do ?</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<!-- <img src="{{asset('img/web.png')}}" alt=""> -->
+				<div class="card skills-card">
+					<div class="card-body">
+						<h2 class="card-title">Applications Web et Mobile</h2>
+						<ul class="card-text">
+							<li>Sites Web.</li>
+							<li>Applications Web.</li>
+							<li>Responsive.</li>
+							<li>API Rest.</li>
+							<li>Android et iOs</li>
+						</ul>
+						<a class="btn btn-lg btn-primary button rounded" href="#" role="button">Demandez un devis !</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="card skills-card">
+					<div class="card-body">
+						<h2 class="card-title">Jeux-vidéos</h2>
+						<ul class="card-text">
+							<li>Projets 2D-3D (Jeux,Prototypes,Test,Algorithmes).</li>
+							<li>Single Player ou Online.</li>
+							<li>Modèles 3D apdaté pour vos jeux-vidéos.</li>
+							<li>Stand-Alone (Windows,Mac Os et Linux), WebGL ou encore Android et iOs.</li>
+						</ul>
+						<a class="btn btn-lg btn-primary button rounded" href="#" role="button">Demandez un devis !</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p>Depuis que Cyril à développé SITE E-Link nous avons pu gagner du temps sur la rédaction de rapports
+					de maintenances pour nos clients !</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<img src="https://docplayer.fr/docs-images/70/63882666/images/1-0.jpg" width="100" alt="">
+				<p>Développeur certifié du Titre Proffessionnel de Développeur logiciel le 17/11/2017.</br>
+					Ce titre est classé au niveau 3, dans le domaine d'activité NSF 326t et au niveau 5 du cadre
+					européen des certifications</p>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

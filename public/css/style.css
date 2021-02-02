@@ -1,0 +1,165 @@
+@font-face {
+	font-family: "Conceptual Progressive";
+	src: url("../fonts/Conceptual Progressive.ttf");
+}
+
+/* .navbar  {
+	background-color: rgba(255, 255, 255, 0.87);
+} */
+
+body{
+	padding-top: 78px;
+	min-width: 360px;
+	/* background-color: rgb(5,8,15);
+	color: rgb(255,255,255); */
+	/* font-family: "Conceptual Progressive"; */
+	background-image: url("../img/background.png");
+	/* background-repeat: no-repeat;*/
+	background-size: cover;
+	background-position: center;
+}
+
+.button {
+	color: white;
+	border-color: white;
+}
+
+/* p {
+	font-family: Arial, Helvetica, sans-serif;
+} */
+
+ul li a {
+	font-size: 1.25em;
+	/*-webkit-text-stroke: 2px #000;*/
+}
+
+#intro {
+	width: 100%;
+	height: 100vh;
+	padding-top: 80px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	/* background-image: url("https://source.unsplash.com/1600x900/?programming"); */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#intro__text h1 {
+	color: white;
+}
+
+/* #intro .video-bg {
+	position: absolute;
+	width: 100%;
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, 0.75);
+} */
+
+/* #intro video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.video-bg p {
+	padding-right: 20px;
+	padding-top: 50px;
+} */
+
+#about {
+	/* height: 50vh; */
+}
+
+#skills {
+	/* height: 50vh; */
+}
+
+#skills img {
+	max-width: 150px;
+}
+
+#creations {
+	/* height: 100vh; */
+}
+
+#contact {
+	padding-top: 80px;
+}
+
+#blog {
+	padding-top: 80px;
+}
+
+/* @media (min-width: 768px) {
+	#intro {
+		height: 100vh;
+	}
+ } */
+
+#web-skills {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center;
+	
+	
+	/* background-image: url("../img/spider-web.png"); */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+/* .skills-card {
+	background-color: crimson;
+}
+
+.skills-card .card-body {
+	background-color: crimson;
+}
+
+.skills-card li {
+	font-size: 1.5em;
+} */
+
+
+#intro-text p {
+	font-size: 1.5em;
+}
+
+.second-skill {
+	font-size: 1em;
+}
+
+
+.photo {
+	display: block;
+	margin: auto;
+	width: 80%;
+	max-width: 300px;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+
+/* 
+-------------------------------------------------------------------------------------------------------------------------
+												PORTFOLIO
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.portfolio__item {
+	margin-left: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+footer {
+	/* background-color: #2a462f; */
+}

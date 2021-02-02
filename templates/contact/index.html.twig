@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% form_theme contactForm 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <section id="contact">
+        <div class="container">
+            <h1>Send me now a message !</h1>
+            <p>This page is not available yet it's under construction !</p>
+
+            {{ form_start(contactForm) }}
+
+            {{ form_end(contactForm) }} 
+            
+            {# {{form_row(contactForm.email, {
+                    'attr':{
+                        'placholder' : 'exemple : jeandupont@gmail.com'
+                    }
+                }l
+            )}} #}
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section id="blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>{{ article.title }}</h2>
+				</div>
+				<div class="col-md-6">
+					{% if is_granted("ROLE_ADMIN") %}
+						<a class="btn btn-warning button" href="#" role="button">Modifier</a>
+					{% endif %}
+				</div>
+			</div>
+			<p>Ecris le : {{ article.creationDate | date('d/m/Y') }} à {{ article.creationDate | date('H:m') }}</p>
+			<p>Modifié le : {{ article.modificationDate | date('d/m/Y') }} à {{ article.modificationDate | date('H:m') }}</p>
+			<img src="{{ article.image }}" alt="{{ article.title }}_img">
+			<p>{{ article.content | json_encode()}}</p>
+			<a class="btn btn-primary button" href="#" role="button">Lire la suite</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}
